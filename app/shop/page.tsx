@@ -7,7 +7,7 @@ import ProductCard from "../components/ProductCard/ProductCard";
 // export const metadata = {
 //   title: "Shop Page",
 // };
-export default function page() {
+export default function Page() {
   const [products, setProducts] = useState<any[]>([]);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
