@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { Flex, Text } from "@mantine/core";
 import ProductCard from "../components/ProductCard/ProductCard";
 
-export const metadata = {
-  title: "Shop Page",
-};
+// export const metadata = {
+//   title: "Shop Page",
+// };
 export default function page({ params }: { params: any }) {
   const [products, setProducts] = useState<any[]>([]);
   useEffect(() => {
