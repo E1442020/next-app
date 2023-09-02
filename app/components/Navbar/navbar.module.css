@@ -1,0 +1,99 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    list-style-type: none;
+  } */
+  
+  .pageContainer {
+    width: 97%;
+    margin: 20px auto;
+    padding: 20px 100px;
+    background-color: #F5F8FD;
+    border: none;
+    border-radius: 5px;
+  }
+  @media (max-width: 940px) {
+    .pageContainer {
+      width: 92%;
+      padding: 20px 20px;
+    }
+  }
+  
+  .navbarContainer {
+    background-color: rgba(245, 248, 253, 0.8117647059);
+    padding-top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  @media (max-width: 940px) {
+    .navbarContainer {
+      flex-direction: column;
+    }
+  }
+  .navbarContainer .logo-container {
+    display: flex;
+  }
+  @media (max-width: 940px) {
+    .navbarContainer .logo-container {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .navbarContainer ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  @media (max-width: 940px) {
+    .navbarContainer ul {
+      width: 100%;
+      flex-direction: column;
+      transition: all 0.5s;
+      position: absolute;
+      left: -100%;
+      top: 62px;
+      padding: 15px 0px;
+    }
+  }
+  .navbarContainer ul li:hover {
+    color: #2E285A;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .navbarContainer ul button {
+    background-color: #2E285A;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .navbarContainer ul button:hover {
+    opacity: 0.8;
+  }
+  .navbarContainer .show {
+    transition: all 0.5s;
+    background-color: rgba(245, 248, 253, 0.8117647059);
+    position: absolute;
+    left: 0;
+    top: 62px;
+    padding: 15px 0px;
+  }
+  .navbarContainer .menu-icon {
+    display: none;
+  }
+  @media (max-width: 940px) {
+    .navbarContainer .menu-icon {
+      display: block;
+      color: #2E285A;
+      cursor: pointer;
+    }
+  }/*# sourceMappingURL=Navbar.css.map */
