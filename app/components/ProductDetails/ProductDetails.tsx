@@ -3,9 +3,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Box, Button, Flex, Rating, Text, Title } from "@mantine/core";
 import Link from "next/link";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function ProductDetails({ productId }: any) {
-  console.log(productId);
+  const isMobile = useMediaQuery("(max-width: 720px)");
 
   const [product, setProduct] = useState<any>({});
 
@@ -16,8 +17,12 @@ export default function ProductDetails({ productId }: any) {
   }, []);
   return (
     <Box px="md">
-      <Flex justify="space-between">
-        <Box w="49%" h="400px">
+      <Flex
+        justify="space-between"
+        gap="md"
+        direction={isMobile ? "column" : undefined}
+      >
+        <Box w={isMobile ? "100%" : "49%"} h="400px">
           <img
             src={product.image}
             alt={product.title}
@@ -28,7 +33,7 @@ export default function ProductDetails({ productId }: any) {
             }}
           />
         </Box>
-        <Flex direction="column" gap="md" w="49%">
+        <Flex direction="column" gap="md" w={isMobile ? "100%" : "49%"}>
           <Title order={3}>{product.title}</Title>
 
           <Text>{product.description}</Text>

@@ -25,7 +25,12 @@ footer {
   .cardWrapper{
     width: 20%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
   }
+  @media screen and (max-width: 720px) {
+    .cardWrapper{
+        width: 90%;
+  }}
   a{
     text-decoration: none;
     color: white;
