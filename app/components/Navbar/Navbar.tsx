@@ -163,16 +163,20 @@ export function Navbar() {
             color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
           />
 
-          <Link href="/" className={classes.link}>
+          <Link href="/" className={classes.link} onClick={closeDrawer}>
             Home
           </Link>
-          <Link href="/blogs" className={classes.link}>
-            Blogs
+          <Link href="/shop" className={classes.link} onClick={closeDrawer}>
+            Shop
           </Link>
-          <Link href="/about-us" className={classes.link}>
+          <Link href="/about-us" className={classes.link} onClick={closeDrawer}>
             About Us
           </Link>
-          <Link href="/contact-us" className={classes.link}>
+          <Link
+            href="/contact-us"
+            className={classes.link}
+            onClick={closeDrawer}
+          >
             Contact Us
           </Link>
 

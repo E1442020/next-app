@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <h2 className={styles.header}>Home Page</h2>
-      <Link href="/about-us">Go to about page</Link>
     </>
   );
 }
